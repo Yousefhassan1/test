@@ -5,48 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Drag Object Test</title>
 <style>
-    #draggable {
-        width: 100px;
-        height: 100px;
-        background-color: blue;
-        position: absolute;
-        cursor: grab; /* Change cursor to indicate draggable */
-    }
+    
 </style>
 </head>
 <body>
+<script></script>
 
-<div id="draggable"></div>
-
-<script>
-    // JavaScript code to make the object draggable
-    let draggable = document.getElementById('draggable');
-    let offsetX, offsetY;
-    let isDragging = false;
-
-    draggable.addEventListener('mousedown', startDragging);
-    document.addEventListener('mouseup', stopDragging);
-    document.addEventListener('mousemove', drag);
-
-    function startDragging(e) {
-        isDragging = true;
-        offsetX = e.clientX - draggable.getBoundingClientRect().left;
-        offsetY = e.clientY - draggable.getBoundingClientRect().top;
-        draggable.style.cursor = 'grabbing'; // Change cursor while dragging
-    }
-
-    function stopDragging() {
-        isDragging = false;
-        draggable.style.cursor = 'grab'; // Change cursor back to indicate draggable
-    }
-
-    function drag(e) {
-        if (isDragging) {
-            draggable.style.left = (e.clientX - offsetX) + 'px';
-            draggable.style.top = (e.clientY - offsetY) + 'px';
-        }
-    }
-</script>
+    
 
 </body>
 </html>
